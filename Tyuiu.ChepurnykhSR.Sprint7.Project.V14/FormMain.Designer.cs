@@ -29,13 +29,35 @@ namespace Tyuiu.ChepurnykhSR.Sprint7.Project.V14
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.buttonDone_CSR = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // buttonDone_CSR
+            // 
+            this.buttonDone_CSR.Location = new System.Drawing.Point(64, 33);
+            this.buttonDone_CSR.Name = "buttonDone_CSR";
+            this.buttonDone_CSR.Size = new System.Drawing.Size(75, 23);
+            this.buttonDone_CSR.TabIndex = 0;
+            this.buttonDone_CSR.Text = "Выполнить";
+            this.buttonDone_CSR.UseVisualStyleBackColor = true;
+            this.buttonDone_CSR.MouseEnter += new System.EventHandler(this.buttonDone_CSR_MouseEnter);
+            this.buttonDone_CSR.MouseLeave += new System.EventHandler(this.buttonDone_CSR_MouseLeave);
+            // 
+            // FormMain
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonDone_CSR);
+            this.Name = "FormMain";
             this.Text = "Form1";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button buttonDone_CSR;
     }
 }
 

@@ -9,6 +9,7 @@ namespace Tyuiu.ChepurnykhSR.Sprint7.Project.V14.Test
         [TestMethod]
         public void TestMethod1()
         {
+
         }
     }
 }
