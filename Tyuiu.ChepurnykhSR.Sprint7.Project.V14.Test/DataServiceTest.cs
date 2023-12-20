@@ -26,7 +26,7 @@ namespace Tyuiu.ChepurnykhSR.Sprint7.Project.V14.Test
             {
                 using (var writer = new StreamWriter(filePath, true)) // открытие файла для записи
                 {
-                    // Пример добавления строки 
+                    // Пример добавления строчки 
                     writer.WriteLine("Начало маршрута; Конец маршрута");
                 }
             }

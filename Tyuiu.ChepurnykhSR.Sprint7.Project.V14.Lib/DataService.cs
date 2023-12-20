@@ -14,7 +14,7 @@ namespace Tyuiu.ChepurnykhSR.Sprint7.Project.V14.Lib
         {
             string[] str = File.ReadAllLines(path);
 
-            //определение количества столбцов и строк
+            //определение количества столбцов и строчек
             int columns = str[0].Split(';').Length;
             int rows = str.Length;
 
