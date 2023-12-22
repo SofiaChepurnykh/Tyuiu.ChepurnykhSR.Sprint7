@@ -29,343 +29,332 @@ namespace Tyuiu.ChepurnykhSR.Sprint7.Project.V14
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.panelTop_CSR = new System.Windows.Forms.Panel();
+            this.Name_CSR = new System.Windows.Forms.Label();
             this.panelLeft_CSR = new System.Windows.Forms.Panel();
+            this.buttonDelete_CSR = new System.Windows.Forms.Button();
+            this.buttonAdd_CSR = new System.Windows.Forms.Button();
+            this.buttonSave_CSR = new System.Windows.Forms.Button();
+            this.buttonOpen_CSR = new System.Windows.Forms.Button();
             this.panelFill_CSR = new System.Windows.Forms.Panel();
+            this.dataGridView_CSR = new System.Windows.Forms.DataGridView();
+            this.Number_CSR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Stsrt_CSR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.End_CSR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Km_CSR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pay_CSR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Stop_CSR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Bus_CSR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Date_CSR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Time_CSR = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.splitter1 = new System.Windows.Forms.Splitter();
-            this.groupBoxInPut_CSR = new System.Windows.Forms.GroupBox();
-            this.groupBoxOutPut_CSR = new System.Windows.Forms.GroupBox();
-            this.groupBoxSearch_CSR = new System.Windows.Forms.GroupBox();
-            this.textBoxInPut_CSR = new System.Windows.Forms.TextBox();
-            this.labelInPut_CSR = new System.Windows.Forms.Label();
-            this.buttonDone_CSR = new System.Windows.Forms.Button();
-            this.textBoxStart_CSR = new System.Windows.Forms.TextBox();
-            this.textBoxAvto_CSR = new System.Windows.Forms.TextBox();
-            this.textBoxStop_CSR = new System.Windows.Forms.TextBox();
-            this.textBoxKm_CSR = new System.Windows.Forms.TextBox();
-            this.textBoxDate_CSR = new System.Windows.Forms.TextBox();
-            this.textBoxPay_CSR = new System.Windows.Forms.TextBox();
-            this.textBoxBus_CSR = new System.Windows.Forms.TextBox();
-            this.textBoxTime_CSR = new System.Windows.Forms.TextBox();
-            this.labelStart_CSR = new System.Windows.Forms.Label();
-            this.labelStop_CSR = new System.Windows.Forms.Label();
-            this.labelKm_CSR = new System.Windows.Forms.Label();
-            this.labelPay_CSR = new System.Windows.Forms.Label();
-            this.labelAvto_CSR = new System.Windows.Forms.Label();
-            this.labelBus_CSR = new System.Windows.Forms.Label();
-            this.labelDate_CSR = new System.Windows.Forms.Label();
-            this.labelTime_CSR = new System.Windows.Forms.Label();
+            this.toolTip_CSR = new System.Windows.Forms.ToolTip(this.components);
+            this.openFileDialog_CSR = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog_CSR = new System.Windows.Forms.SaveFileDialog();
+            this.groupBoxBus_CSR = new System.Windows.Forms.GroupBox();
+            this.comboBoxBus_CSR = new System.Windows.Forms.ComboBox();
             this.buttonHelp_CSR = new System.Windows.Forms.Button();
-            this.buttonAbout_CSR = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panelTop_CSR.SuspendLayout();
             this.panelLeft_CSR.SuspendLayout();
             this.panelFill_CSR.SuspendLayout();
-            this.groupBoxInPut_CSR.SuspendLayout();
-            this.groupBoxOutPut_CSR.SuspendLayout();
-            this.groupBoxSearch_CSR.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_CSR)).BeginInit();
+            this.groupBoxBus_CSR.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelTop_CSR
             // 
-            this.panelTop_CSR.Controls.Add(this.groupBoxInPut_CSR);
+            this.panelTop_CSR.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panelTop_CSR.Controls.Add(this.buttonHelp_CSR);
+            this.panelTop_CSR.Controls.Add(this.Name_CSR);
             this.panelTop_CSR.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop_CSR.Location = new System.Drawing.Point(0, 0);
             this.panelTop_CSR.Name = "panelTop_CSR";
             this.panelTop_CSR.Size = new System.Drawing.Size(800, 111);
             this.panelTop_CSR.TabIndex = 0;
             // 
+            // Name_CSR
+            // 
+            this.Name_CSR.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Name_CSR.AutoSize = true;
+            this.Name_CSR.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Name_CSR.Location = new System.Drawing.Point(149, 36);
+            this.Name_CSR.Name = "Name_CSR";
+            this.Name_CSR.Size = new System.Drawing.Size(501, 39);
+            this.Name_CSR.TabIndex = 0;
+            this.Name_CSR.Text = "Городской транспорт Тюмени";
+            // 
             // panelLeft_CSR
             // 
-            this.panelLeft_CSR.Controls.Add(this.groupBoxOutPut_CSR);
+            this.panelLeft_CSR.Controls.Add(this.groupBoxBus_CSR);
+            this.panelLeft_CSR.Controls.Add(this.buttonDelete_CSR);
+            this.panelLeft_CSR.Controls.Add(this.buttonAdd_CSR);
+            this.panelLeft_CSR.Controls.Add(this.buttonSave_CSR);
+            this.panelLeft_CSR.Controls.Add(this.buttonOpen_CSR);
             this.panelLeft_CSR.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelLeft_CSR.Location = new System.Drawing.Point(0, 111);
             this.panelLeft_CSR.Name = "panelLeft_CSR";
-            this.panelLeft_CSR.Size = new System.Drawing.Size(397, 339);
+            this.panelLeft_CSR.Size = new System.Drawing.Size(343, 339);
             this.panelLeft_CSR.TabIndex = 1;
+            // 
+            // buttonDelete_CSR
+            // 
+            this.buttonDelete_CSR.Enabled = false;
+            this.buttonDelete_CSR.Image = ((System.Drawing.Image)(resources.GetObject("buttonDelete_CSR.Image")));
+            this.buttonDelete_CSR.Location = new System.Drawing.Point(255, 6);
+            this.buttonDelete_CSR.Name = "buttonDelete_CSR";
+            this.buttonDelete_CSR.Size = new System.Drawing.Size(75, 57);
+            this.buttonDelete_CSR.TabIndex = 3;
+            this.buttonDelete_CSR.UseVisualStyleBackColor = true;
+            this.buttonDelete_CSR.Click += new System.EventHandler(this.buttonDelete_CSR_Click);
+            // 
+            // buttonAdd_CSR
+            // 
+            this.buttonAdd_CSR.Enabled = false;
+            this.buttonAdd_CSR.Image = ((System.Drawing.Image)(resources.GetObject("buttonAdd_CSR.Image")));
+            this.buttonAdd_CSR.Location = new System.Drawing.Point(174, 6);
+            this.buttonAdd_CSR.Name = "buttonAdd_CSR";
+            this.buttonAdd_CSR.Size = new System.Drawing.Size(75, 57);
+            this.buttonAdd_CSR.TabIndex = 2;
+            this.buttonAdd_CSR.UseVisualStyleBackColor = true;
+            this.buttonAdd_CSR.Click += new System.EventHandler(this.buttonAdd_CSR_Click);
+            // 
+            // buttonSave_CSR
+            // 
+            this.buttonSave_CSR.Enabled = false;
+            this.buttonSave_CSR.Image = ((System.Drawing.Image)(resources.GetObject("buttonSave_CSR.Image")));
+            this.buttonSave_CSR.Location = new System.Drawing.Point(93, 6);
+            this.buttonSave_CSR.Name = "buttonSave_CSR";
+            this.buttonSave_CSR.Size = new System.Drawing.Size(75, 57);
+            this.buttonSave_CSR.TabIndex = 1;
+            this.buttonSave_CSR.UseVisualStyleBackColor = true;
+            this.buttonSave_CSR.Click += new System.EventHandler(this.buttonSave_CSR_Click);
+            // 
+            // buttonOpen_CSR
+            // 
+            this.buttonOpen_CSR.Image = ((System.Drawing.Image)(resources.GetObject("buttonOpen_CSR.Image")));
+            this.buttonOpen_CSR.Location = new System.Drawing.Point(12, 6);
+            this.buttonOpen_CSR.Name = "buttonOpen_CSR";
+            this.buttonOpen_CSR.Size = new System.Drawing.Size(75, 57);
+            this.buttonOpen_CSR.TabIndex = 0;
+            this.buttonOpen_CSR.UseVisualStyleBackColor = true;
+            this.buttonOpen_CSR.Click += new System.EventHandler(this.buttonOpen_CSR_Click);
             // 
             // panelFill_CSR
             // 
-            this.panelFill_CSR.Controls.Add(this.groupBoxSearch_CSR);
+            this.panelFill_CSR.Controls.Add(this.dataGridView_CSR);
             this.panelFill_CSR.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelFill_CSR.Location = new System.Drawing.Point(397, 111);
+            this.panelFill_CSR.Location = new System.Drawing.Point(343, 111);
             this.panelFill_CSR.Name = "panelFill_CSR";
-            this.panelFill_CSR.Size = new System.Drawing.Size(403, 339);
+            this.panelFill_CSR.Size = new System.Drawing.Size(457, 339);
             this.panelFill_CSR.TabIndex = 2;
+            // 
+            // dataGridView_CSR
+            // 
+            this.dataGridView_CSR.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView_CSR.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_CSR.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Number_CSR,
+            this.Stsrt_CSR,
+            this.End_CSR,
+            this.Km_CSR,
+            this.Pay_CSR,
+            this.Stop_CSR,
+            this.Bus_CSR,
+            this.Date_CSR,
+            this.Time_CSR});
+            this.dataGridView_CSR.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView_CSR.Name = "dataGridView_CSR";
+            this.dataGridView_CSR.RowHeadersVisible = false;
+            this.dataGridView_CSR.Size = new System.Drawing.Size(457, 339);
+            this.dataGridView_CSR.TabIndex = 0;
+            // 
+            // Number_CSR
+            // 
+            this.Number_CSR.HeaderText = "Номер маршрута";
+            this.Number_CSR.Name = "Number_CSR";
+            // 
+            // Stsrt_CSR
+            // 
+            this.Stsrt_CSR.HeaderText = "Начало маршрута";
+            this.Stsrt_CSR.Name = "Stsrt_CSR";
+            // 
+            // End_CSR
+            // 
+            this.End_CSR.HeaderText = "Конец маршрута";
+            this.End_CSR.Name = "End_CSR";
+            // 
+            // Km_CSR
+            // 
+            this.Km_CSR.HeaderText = "Протяженность маршрута, км";
+            this.Km_CSR.Name = "Km_CSR";
+            // 
+            // Pay_CSR
+            // 
+            this.Pay_CSR.HeaderText = "Наличие системы безналичной оплаты проезда";
+            this.Pay_CSR.Name = "Pay_CSR";
+            // 
+            // Stop_CSR
+            // 
+            this.Stop_CSR.HeaderText = "Наличие автоматического объявления остановки";
+            this.Stop_CSR.Name = "Stop_CSR";
+            // 
+            // Bus_CSR
+            // 
+            this.Bus_CSR.HeaderText = "Вид транспорта";
+            this.Bus_CSR.Name = "Bus_CSR";
+            // 
+            // Date_CSR
+            // 
+            this.Date_CSR.HeaderText = "Дата введения маршрута";
+            this.Date_CSR.Name = "Date_CSR";
+            // 
+            // Time_CSR
+            // 
+            this.Time_CSR.HeaderText = "Время в пути, мин";
+            this.Time_CSR.Name = "Time_CSR";
             // 
             // splitter1
             // 
-            this.splitter1.Location = new System.Drawing.Point(397, 111);
+            this.splitter1.Location = new System.Drawing.Point(343, 111);
             this.splitter1.Name = "splitter1";
             this.splitter1.Size = new System.Drawing.Size(3, 339);
             this.splitter1.TabIndex = 3;
             this.splitter1.TabStop = false;
             // 
-            // groupBoxInPut_CSR
+            // openFileDialog_CSR
             // 
-            this.groupBoxInPut_CSR.Controls.Add(this.button3);
-            this.groupBoxInPut_CSR.Controls.Add(this.buttonAbout_CSR);
-            this.groupBoxInPut_CSR.Controls.Add(this.buttonHelp_CSR);
-            this.groupBoxInPut_CSR.Controls.Add(this.buttonDone_CSR);
-            this.groupBoxInPut_CSR.Controls.Add(this.labelInPut_CSR);
-            this.groupBoxInPut_CSR.Controls.Add(this.textBoxInPut_CSR);
-            this.groupBoxInPut_CSR.Location = new System.Drawing.Point(12, 12);
-            this.groupBoxInPut_CSR.Name = "groupBoxInPut_CSR";
-            this.groupBoxInPut_CSR.Size = new System.Drawing.Size(776, 93);
-            this.groupBoxInPut_CSR.TabIndex = 0;
-            this.groupBoxInPut_CSR.TabStop = false;
-            this.groupBoxInPut_CSR.Text = "Ввод данных:";
+            this.openFileDialog_CSR.FileName = "openFileDialog1";
             // 
-            // groupBoxOutPut_CSR
+            // groupBoxBus_CSR
             // 
-            this.groupBoxOutPut_CSR.Controls.Add(this.labelTime_CSR);
-            this.groupBoxOutPut_CSR.Controls.Add(this.labelDate_CSR);
-            this.groupBoxOutPut_CSR.Controls.Add(this.labelBus_CSR);
-            this.groupBoxOutPut_CSR.Controls.Add(this.labelAvto_CSR);
-            this.groupBoxOutPut_CSR.Controls.Add(this.labelPay_CSR);
-            this.groupBoxOutPut_CSR.Controls.Add(this.labelKm_CSR);
-            this.groupBoxOutPut_CSR.Controls.Add(this.labelStop_CSR);
-            this.groupBoxOutPut_CSR.Controls.Add(this.labelStart_CSR);
-            this.groupBoxOutPut_CSR.Controls.Add(this.textBoxTime_CSR);
-            this.groupBoxOutPut_CSR.Controls.Add(this.textBoxBus_CSR);
-            this.groupBoxOutPut_CSR.Controls.Add(this.textBoxPay_CSR);
-            this.groupBoxOutPut_CSR.Controls.Add(this.textBoxDate_CSR);
-            this.groupBoxOutPut_CSR.Controls.Add(this.textBoxKm_CSR);
-            this.groupBoxOutPut_CSR.Controls.Add(this.textBoxStop_CSR);
-            this.groupBoxOutPut_CSR.Controls.Add(this.textBoxAvto_CSR);
-            this.groupBoxOutPut_CSR.Controls.Add(this.textBoxStart_CSR);
-            this.groupBoxOutPut_CSR.Location = new System.Drawing.Point(12, 6);
-            this.groupBoxOutPut_CSR.Name = "groupBoxOutPut_CSR";
-            this.groupBoxOutPut_CSR.Size = new System.Drawing.Size(379, 321);
-            this.groupBoxOutPut_CSR.TabIndex = 0;
-            this.groupBoxOutPut_CSR.TabStop = false;
-            this.groupBoxOutPut_CSR.Text = "Вывод данных:";
+            this.groupBoxBus_CSR.Controls.Add(this.comboBoxBus_CSR);
+            this.groupBoxBus_CSR.Location = new System.Drawing.Point(12, 69);
+            this.groupBoxBus_CSR.Name = "groupBoxBus_CSR";
+            this.groupBoxBus_CSR.Size = new System.Drawing.Size(156, 49);
+            this.groupBoxBus_CSR.TabIndex = 4;
+            this.groupBoxBus_CSR.TabStop = false;
+            this.groupBoxBus_CSR.Text = "Выбор маршрута:";
             // 
-            // groupBoxSearch_CSR
+            // comboBoxBus_CSR
             // 
-            this.groupBoxSearch_CSR.Controls.Add(this.dataGridView1);
-            this.groupBoxSearch_CSR.Controls.Add(this.comboBox1);
-            this.groupBoxSearch_CSR.Location = new System.Drawing.Point(9, 6);
-            this.groupBoxSearch_CSR.Name = "groupBoxSearch_CSR";
-            this.groupBoxSearch_CSR.Size = new System.Drawing.Size(382, 321);
-            this.groupBoxSearch_CSR.TabIndex = 0;
-            this.groupBoxSearch_CSR.TabStop = false;
-            this.groupBoxSearch_CSR.Text = "Добавление информации:";
-            // 
-            // textBoxInPut_CSR
-            // 
-            this.textBoxInPut_CSR.Location = new System.Drawing.Point(9, 32);
-            this.textBoxInPut_CSR.Name = "textBoxInPut_CSR";
-            this.textBoxInPut_CSR.Size = new System.Drawing.Size(100, 20);
-            this.textBoxInPut_CSR.TabIndex = 0;
-            // 
-            // labelInPut_CSR
-            // 
-            this.labelInPut_CSR.AutoSize = true;
-            this.labelInPut_CSR.Location = new System.Drawing.Point(6, 16);
-            this.labelInPut_CSR.Name = "labelInPut_CSR";
-            this.labelInPut_CSR.Size = new System.Drawing.Size(240, 13);
-            this.labelInPut_CSR.TabIndex = 1;
-            this.labelInPut_CSR.Text = "Введите номер маршрута для поиска данных:";
-            // 
-            // buttonDone_CSR
-            // 
-            this.buttonDone_CSR.Location = new System.Drawing.Point(9, 58);
-            this.buttonDone_CSR.Name = "buttonDone_CSR";
-            this.buttonDone_CSR.Size = new System.Drawing.Size(75, 23);
-            this.buttonDone_CSR.TabIndex = 2;
-            this.buttonDone_CSR.Text = "Выполнить";
-            this.buttonDone_CSR.UseVisualStyleBackColor = true;
-            // 
-            // textBoxStart_CSR
-            // 
-            this.textBoxStart_CSR.Location = new System.Drawing.Point(9, 48);
-            this.textBoxStart_CSR.Multiline = true;
-            this.textBoxStart_CSR.Name = "textBoxStart_CSR";
-            this.textBoxStart_CSR.ReadOnly = true;
-            this.textBoxStart_CSR.Size = new System.Drawing.Size(166, 33);
-            this.textBoxStart_CSR.TabIndex = 0;
-            // 
-            // textBoxAvto_CSR
-            // 
-            this.textBoxAvto_CSR.Location = new System.Drawing.Point(207, 48);
-            this.textBoxAvto_CSR.Multiline = true;
-            this.textBoxAvto_CSR.Name = "textBoxAvto_CSR";
-            this.textBoxAvto_CSR.ReadOnly = true;
-            this.textBoxAvto_CSR.Size = new System.Drawing.Size(166, 33);
-            this.textBoxAvto_CSR.TabIndex = 2;
-            // 
-            // textBoxStop_CSR
-            // 
-            this.textBoxStop_CSR.Location = new System.Drawing.Point(9, 126);
-            this.textBoxStop_CSR.Multiline = true;
-            this.textBoxStop_CSR.Name = "textBoxStop_CSR";
-            this.textBoxStop_CSR.ReadOnly = true;
-            this.textBoxStop_CSR.Size = new System.Drawing.Size(166, 33);
-            this.textBoxStop_CSR.TabIndex = 3;
-            // 
-            // textBoxKm_CSR
-            // 
-            this.textBoxKm_CSR.Location = new System.Drawing.Point(9, 204);
-            this.textBoxKm_CSR.Multiline = true;
-            this.textBoxKm_CSR.Name = "textBoxKm_CSR";
-            this.textBoxKm_CSR.ReadOnly = true;
-            this.textBoxKm_CSR.Size = new System.Drawing.Size(166, 33);
-            this.textBoxKm_CSR.TabIndex = 4;
-            // 
-            // textBoxDate_CSR
-            // 
-            this.textBoxDate_CSR.Location = new System.Drawing.Point(207, 204);
-            this.textBoxDate_CSR.Multiline = true;
-            this.textBoxDate_CSR.Name = "textBoxDate_CSR";
-            this.textBoxDate_CSR.ReadOnly = true;
-            this.textBoxDate_CSR.Size = new System.Drawing.Size(166, 33);
-            this.textBoxDate_CSR.TabIndex = 5;
-            // 
-            // textBoxPay_CSR
-            // 
-            this.textBoxPay_CSR.Location = new System.Drawing.Point(9, 282);
-            this.textBoxPay_CSR.Multiline = true;
-            this.textBoxPay_CSR.Name = "textBoxPay_CSR";
-            this.textBoxPay_CSR.ReadOnly = true;
-            this.textBoxPay_CSR.Size = new System.Drawing.Size(166, 33);
-            this.textBoxPay_CSR.TabIndex = 6;
-            // 
-            // textBoxBus_CSR
-            // 
-            this.textBoxBus_CSR.Location = new System.Drawing.Point(207, 126);
-            this.textBoxBus_CSR.Multiline = true;
-            this.textBoxBus_CSR.Name = "textBoxBus_CSR";
-            this.textBoxBus_CSR.ReadOnly = true;
-            this.textBoxBus_CSR.Size = new System.Drawing.Size(166, 33);
-            this.textBoxBus_CSR.TabIndex = 7;
-            // 
-            // textBoxTime_CSR
-            // 
-            this.textBoxTime_CSR.Location = new System.Drawing.Point(207, 282);
-            this.textBoxTime_CSR.Multiline = true;
-            this.textBoxTime_CSR.Name = "textBoxTime_CSR";
-            this.textBoxTime_CSR.ReadOnly = true;
-            this.textBoxTime_CSR.Size = new System.Drawing.Size(166, 33);
-            this.textBoxTime_CSR.TabIndex = 8;
-            // 
-            // labelStart_CSR
-            // 
-            this.labelStart_CSR.AutoSize = true;
-            this.labelStart_CSR.Location = new System.Drawing.Point(9, 29);
-            this.labelStart_CSR.Name = "labelStart_CSR";
-            this.labelStart_CSR.Size = new System.Drawing.Size(100, 13);
-            this.labelStart_CSR.TabIndex = 9;
-            this.labelStart_CSR.Text = "Начало маршрута:";
-            // 
-            // labelStop_CSR
-            // 
-            this.labelStop_CSR.AutoSize = true;
-            this.labelStop_CSR.Location = new System.Drawing.Point(9, 107);
-            this.labelStop_CSR.Name = "labelStop_CSR";
-            this.labelStop_CSR.Size = new System.Drawing.Size(94, 13);
-            this.labelStop_CSR.TabIndex = 10;
-            this.labelStop_CSR.Text = "Конец маршрута:";
-            // 
-            // labelKm_CSR
-            // 
-            this.labelKm_CSR.AutoSize = true;
-            this.labelKm_CSR.Location = new System.Drawing.Point(9, 187);
-            this.labelKm_CSR.Name = "labelKm_CSR";
-            this.labelKm_CSR.Size = new System.Drawing.Size(163, 13);
-            this.labelKm_CSR.TabIndex = 11;
-            this.labelKm_CSR.Text = "Протяженность маршрута, км:";
-            // 
-            // labelPay_CSR
-            // 
-            this.labelPay_CSR.AutoSize = true;
-            this.labelPay_CSR.Location = new System.Drawing.Point(9, 253);
-            this.labelPay_CSR.Name = "labelPay_CSR";
-            this.labelPay_CSR.Size = new System.Drawing.Size(169, 26);
-            this.labelPay_CSR.TabIndex = 12;
-            this.labelPay_CSR.Text = "Наличие системы безналичной \r\nоплаты проезда:";
-            // 
-            // labelAvto_CSR
-            // 
-            this.labelAvto_CSR.AutoSize = true;
-            this.labelAvto_CSR.Location = new System.Drawing.Point(207, 16);
-            this.labelAvto_CSR.Name = "labelAvto_CSR";
-            this.labelAvto_CSR.Size = new System.Drawing.Size(144, 26);
-            this.labelAvto_CSR.TabIndex = 13;
-            this.labelAvto_CSR.Text = "Наличие автоматического \r\nобъявления остановки:";
-            // 
-            // labelBus_CSR
-            // 
-            this.labelBus_CSR.AutoSize = true;
-            this.labelBus_CSR.Location = new System.Drawing.Point(207, 107);
-            this.labelBus_CSR.Name = "labelBus_CSR";
-            this.labelBus_CSR.Size = new System.Drawing.Size(90, 13);
-            this.labelBus_CSR.TabIndex = 14;
-            this.labelBus_CSR.Text = "Вид транспорта:";
-            // 
-            // labelDate_CSR
-            // 
-            this.labelDate_CSR.AutoSize = true;
-            this.labelDate_CSR.Location = new System.Drawing.Point(207, 187);
-            this.labelDate_CSR.Name = "labelDate_CSR";
-            this.labelDate_CSR.Size = new System.Drawing.Size(140, 13);
-            this.labelDate_CSR.TabIndex = 15;
-            this.labelDate_CSR.Text = "Дата введения маршрута:";
-            // 
-            // labelTime_CSR
-            // 
-            this.labelTime_CSR.AutoSize = true;
-            this.labelTime_CSR.Location = new System.Drawing.Point(207, 263);
-            this.labelTime_CSR.Name = "labelTime_CSR";
-            this.labelTime_CSR.Size = new System.Drawing.Size(103, 13);
-            this.labelTime_CSR.TabIndex = 16;
-            this.labelTime_CSR.Text = "Время в пути, мин:";
+            this.comboBoxBus_CSR.FormattingEnabled = true;
+            this.comboBoxBus_CSR.Items.AddRange(new object[] {
+            "1",
+            "1д",
+            "2",
+            "3",
+            "4",
+            "4д",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "11д",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "17к",
+            "18",
+            "20",
+            "22",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "29д",
+            "30",
+            "31",
+            "32",
+            "33",
+            "34",
+            "35",
+            "36",
+            "36к",
+            "37",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45",
+            "46",
+            "47",
+            "47д",
+            "48",
+            "49",
+            "50",
+            "51",
+            "51д",
+            "52",
+            "53",
+            "54",
+            "54д",
+            "55",
+            "57",
+            "60",
+            "62",
+            "63",
+            "64",
+            "65",
+            "68",
+            "70",
+            "73",
+            "76",
+            "79",
+            "83",
+            "84",
+            "85",
+            "86",
+            "88",
+            "89",
+            "91",
+            "96",
+            "98",
+            "99",
+            "100",
+            "100к",
+            "120",
+            "120к",
+            "121",
+            "128",
+            "128к",
+            "135",
+            "140",
+            "144",
+            "145",
+            "145к",
+            "146",
+            "147",
+            "151",
+            "151к",
+            "156"});
+            this.comboBoxBus_CSR.Location = new System.Drawing.Point(6, 19);
+            this.comboBoxBus_CSR.Name = "comboBoxBus_CSR";
+            this.comboBoxBus_CSR.Size = new System.Drawing.Size(119, 21);
+            this.comboBoxBus_CSR.TabIndex = 0;
+            this.comboBoxBus_CSR.SelectedIndexChanged += new System.EventHandler(this.comboBoxBus_CSR_SelectedIndexChanged);
             // 
             // buttonHelp_CSR
             // 
-            this.buttonHelp_CSR.Location = new System.Drawing.Point(683, 20);
+            this.buttonHelp_CSR.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.buttonHelp_CSR.Image = ((System.Drawing.Image)(resources.GetObject("buttonHelp_CSR.Image")));
+            this.buttonHelp_CSR.Location = new System.Drawing.Point(713, 12);
             this.buttonHelp_CSR.Name = "buttonHelp_CSR";
-            this.buttonHelp_CSR.Size = new System.Drawing.Size(87, 46);
-            this.buttonHelp_CSR.TabIndex = 3;
-            this.buttonHelp_CSR.Text = "Справка";
-            this.buttonHelp_CSR.UseVisualStyleBackColor = true;
-            // 
-            // buttonAbout_CSR
-            // 
-            this.buttonAbout_CSR.Location = new System.Drawing.Point(590, 20);
-            this.buttonAbout_CSR.Name = "buttonAbout_CSR";
-            this.buttonAbout_CSR.Size = new System.Drawing.Size(87, 46);
-            this.buttonAbout_CSR.TabIndex = 4;
-            this.buttonAbout_CSR.Text = "Информация";
-            this.buttonAbout_CSR.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(497, 20);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(87, 46);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Добавление маршрута";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(7, 20);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(369, 21);
-            this.comboBox1.TabIndex = 0;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(7, 48);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(369, 267);
-            this.dataGridView1.TabIndex = 1;
+            this.buttonHelp_CSR.Size = new System.Drawing.Size(75, 57);
+            this.buttonHelp_CSR.TabIndex = 1;
+            this.buttonHelp_CSR.UseVisualStyleBackColor = false;
             // 
             // FormMain
             // 
@@ -379,14 +368,11 @@ namespace Tyuiu.ChepurnykhSR.Sprint7.Project.V14
             this.Name = "FormMain";
             this.Text = "Form1";
             this.panelTop_CSR.ResumeLayout(false);
+            this.panelTop_CSR.PerformLayout();
             this.panelLeft_CSR.ResumeLayout(false);
             this.panelFill_CSR.ResumeLayout(false);
-            this.groupBoxInPut_CSR.ResumeLayout(false);
-            this.groupBoxInPut_CSR.PerformLayout();
-            this.groupBoxOutPut_CSR.ResumeLayout(false);
-            this.groupBoxOutPut_CSR.PerformLayout();
-            this.groupBoxSearch_CSR.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_CSR)).EndInit();
+            this.groupBoxBus_CSR.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -394,36 +380,30 @@ namespace Tyuiu.ChepurnykhSR.Sprint7.Project.V14
         #endregion
 
         private System.Windows.Forms.Panel panelTop_CSR;
-        private System.Windows.Forms.GroupBox groupBoxInPut_CSR;
-        private System.Windows.Forms.Button buttonDone_CSR;
-        private System.Windows.Forms.Label labelInPut_CSR;
-        private System.Windows.Forms.TextBox textBoxInPut_CSR;
         private System.Windows.Forms.Panel panelLeft_CSR;
-        private System.Windows.Forms.GroupBox groupBoxOutPut_CSR;
-        private System.Windows.Forms.Label labelTime_CSR;
-        private System.Windows.Forms.Label labelDate_CSR;
-        private System.Windows.Forms.Label labelBus_CSR;
-        private System.Windows.Forms.Label labelAvto_CSR;
-        private System.Windows.Forms.Label labelPay_CSR;
-        private System.Windows.Forms.Label labelKm_CSR;
-        private System.Windows.Forms.Label labelStop_CSR;
-        private System.Windows.Forms.Label labelStart_CSR;
-        private System.Windows.Forms.TextBox textBoxTime_CSR;
-        private System.Windows.Forms.TextBox textBoxBus_CSR;
-        private System.Windows.Forms.TextBox textBoxPay_CSR;
-        private System.Windows.Forms.TextBox textBoxDate_CSR;
-        private System.Windows.Forms.TextBox textBoxKm_CSR;
-        private System.Windows.Forms.TextBox textBoxStop_CSR;
-        private System.Windows.Forms.TextBox textBoxAvto_CSR;
-        private System.Windows.Forms.TextBox textBoxStart_CSR;
         private System.Windows.Forms.Panel panelFill_CSR;
-        private System.Windows.Forms.GroupBox groupBoxSearch_CSR;
         private System.Windows.Forms.Splitter splitter1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button buttonAbout_CSR;
+        private System.Windows.Forms.DataGridView dataGridView_CSR;
+        private System.Windows.Forms.Label Name_CSR;
+        private System.Windows.Forms.Button buttonOpen_CSR;
+        private System.Windows.Forms.Button buttonSave_CSR;
+        private System.Windows.Forms.ToolTip toolTip_CSR;
+        private System.Windows.Forms.OpenFileDialog openFileDialog_CSR;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog_CSR;
+        private System.Windows.Forms.Button buttonDelete_CSR;
+        private System.Windows.Forms.Button buttonAdd_CSR;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Number_CSR;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Stsrt_CSR;
+        private System.Windows.Forms.DataGridViewTextBoxColumn End_CSR;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Km_CSR;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Pay_CSR;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Stop_CSR;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Bus_CSR;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Date_CSR;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Time_CSR;
+        private System.Windows.Forms.GroupBox groupBoxBus_CSR;
+        private System.Windows.Forms.ComboBox comboBoxBus_CSR;
         private System.Windows.Forms.Button buttonHelp_CSR;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 
