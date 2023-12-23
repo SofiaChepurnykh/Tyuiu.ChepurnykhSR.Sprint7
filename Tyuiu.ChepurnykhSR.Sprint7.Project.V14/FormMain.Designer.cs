@@ -72,6 +72,9 @@ namespace Tyuiu.ChepurnykhSR.Sprint7.Project.V14
             this.openFileDialog_CSR = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog_CSR = new System.Windows.Forms.SaveFileDialog();
             this.comboBoxKm_CSR = new System.Windows.Forms.ComboBox();
+            this.buttonInfo_CSR = new System.Windows.Forms.Button();
+            this.textBoxA_CSR = new System.Windows.Forms.TextBox();
+            this.textBoxM_CSR = new System.Windows.Forms.TextBox();
             this.panelTop_CSR.SuspendLayout();
             this.panelLeft_CSR.SuspendLayout();
             this.groupBoxKm_CSR.SuspendLayout();
@@ -90,7 +93,6 @@ namespace Tyuiu.ChepurnykhSR.Sprint7.Project.V14
             // panelTop_CSR
             // 
             this.panelTop_CSR.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.panelTop_CSR.Controls.Add(this.buttonHelp_CSR);
             this.panelTop_CSR.Controls.Add(this.Name_CSR);
             this.panelTop_CSR.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop_CSR.Location = new System.Drawing.Point(0, 0);
@@ -100,15 +102,18 @@ namespace Tyuiu.ChepurnykhSR.Sprint7.Project.V14
             // 
             // buttonHelp_CSR
             // 
-            this.buttonHelp_CSR.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonHelp_CSR.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.buttonHelp_CSR.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonHelp_CSR.BackColor = System.Drawing.SystemColors.ControlLight;
             this.buttonHelp_CSR.Image = ((System.Drawing.Image)(resources.GetObject("buttonHelp_CSR.Image")));
-            this.buttonHelp_CSR.Location = new System.Drawing.Point(1152, 12);
+            this.buttonHelp_CSR.Location = new System.Drawing.Point(255, 321);
             this.buttonHelp_CSR.Name = "buttonHelp_CSR";
             this.buttonHelp_CSR.Size = new System.Drawing.Size(75, 57);
             this.buttonHelp_CSR.TabIndex = 1;
+            this.toolTip_CSR.SetToolTip(this.buttonHelp_CSR, "Информация о разработчике");
             this.buttonHelp_CSR.UseVisualStyleBackColor = false;
             this.buttonHelp_CSR.Click += new System.EventHandler(this.buttonHelp_CSR_Click);
+            this.buttonHelp_CSR.MouseEnter += new System.EventHandler(this.buttonHelp_CSR_MouseEnter);
+            this.buttonHelp_CSR.MouseLeave += new System.EventHandler(this.buttonHelp_CSR_MouseLeave);
             // 
             // Name_CSR
             // 
@@ -123,6 +128,10 @@ namespace Tyuiu.ChepurnykhSR.Sprint7.Project.V14
             // 
             // panelLeft_CSR
             // 
+            this.panelLeft_CSR.Controls.Add(this.textBoxM_CSR);
+            this.panelLeft_CSR.Controls.Add(this.textBoxA_CSR);
+            this.panelLeft_CSR.Controls.Add(this.buttonHelp_CSR);
+            this.panelLeft_CSR.Controls.Add(this.buttonInfo_CSR);
             this.panelLeft_CSR.Controls.Add(this.groupBoxKm_CSR);
             this.panelLeft_CSR.Controls.Add(this.groupBoxTypeBus_CSR);
             this.panelLeft_CSR.Controls.Add(this.groupBoxSearch_CSR);
@@ -156,7 +165,7 @@ namespace Tyuiu.ChepurnykhSR.Sprint7.Project.V14
             this.groupBoxTypeBus_CSR.Size = new System.Drawing.Size(156, 58);
             this.groupBoxTypeBus_CSR.TabIndex = 10;
             this.groupBoxTypeBus_CSR.TabStop = false;
-            this.groupBoxTypeBus_CSR.Text = "График типов автобуса";
+            this.groupBoxTypeBus_CSR.Text = "График типов автобусов";
             // 
             // buttonBus_CSR
             // 
@@ -241,6 +250,8 @@ namespace Tyuiu.ChepurnykhSR.Sprint7.Project.V14
             this.toolTip_CSR.SetToolTip(this.buttonDelete_CSR, "Удалить выбранную строку в таблице");
             this.buttonDelete_CSR.UseVisualStyleBackColor = true;
             this.buttonDelete_CSR.Click += new System.EventHandler(this.buttonDelete_CSR_Click);
+            this.buttonDelete_CSR.MouseEnter += new System.EventHandler(this.buttonDelete_CSR_MouseEnter);
+            this.buttonDelete_CSR.MouseLeave += new System.EventHandler(this.buttonDelete_CSR_MouseLeave);
             // 
             // buttonAdd_CSR
             // 
@@ -253,6 +264,8 @@ namespace Tyuiu.ChepurnykhSR.Sprint7.Project.V14
             this.toolTip_CSR.SetToolTip(this.buttonAdd_CSR, "Добавить строку в таблице");
             this.buttonAdd_CSR.UseVisualStyleBackColor = true;
             this.buttonAdd_CSR.Click += new System.EventHandler(this.buttonAdd_CSR_Click);
+            this.buttonAdd_CSR.MouseEnter += new System.EventHandler(this.buttonAdd_CSR_MouseEnter);
+            this.buttonAdd_CSR.MouseLeave += new System.EventHandler(this.buttonAdd_CSR_MouseLeave);
             // 
             // buttonSave_CSR
             // 
@@ -265,6 +278,8 @@ namespace Tyuiu.ChepurnykhSR.Sprint7.Project.V14
             this.toolTip_CSR.SetToolTip(this.buttonSave_CSR, "Сохранить обработанные данные в файл в формате CSV");
             this.buttonSave_CSR.UseVisualStyleBackColor = true;
             this.buttonSave_CSR.Click += new System.EventHandler(this.buttonSave_CSR_Click);
+            this.buttonSave_CSR.MouseEnter += new System.EventHandler(this.buttonSave_CSR_MouseEnter);
+            this.buttonSave_CSR.MouseLeave += new System.EventHandler(this.buttonSave_CSR_MouseLeave);
             // 
             // buttonOpen_CSR
             // 
@@ -276,6 +291,8 @@ namespace Tyuiu.ChepurnykhSR.Sprint7.Project.V14
             this.toolTip_CSR.SetToolTip(this.buttonOpen_CSR, "Открыть файл в формате CSV");
             this.buttonOpen_CSR.UseVisualStyleBackColor = true;
             this.buttonOpen_CSR.Click += new System.EventHandler(this.buttonOpen_CSR_Click);
+            this.buttonOpen_CSR.MouseEnter += new System.EventHandler(this.buttonOpen_CSR_MouseEnter);
+            this.buttonOpen_CSR.MouseLeave += new System.EventHandler(this.buttonOpen_CSR_MouseLeave);
             // 
             // panelFill_CSR
             // 
@@ -438,6 +455,34 @@ namespace Tyuiu.ChepurnykhSR.Sprint7.Project.V14
             this.comboBoxKm_CSR.TabIndex = 0;
             this.comboBoxKm_CSR.SelectedIndexChanged += new System.EventHandler(this.comboBoxKm_CSR_SelectedIndexChanged);
             // 
+            // buttonInfo_CSR
+            // 
+            this.buttonInfo_CSR.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonInfo_CSR.Image = ((System.Drawing.Image)(resources.GetObject("buttonInfo_CSR.Image")));
+            this.buttonInfo_CSR.Location = new System.Drawing.Point(174, 321);
+            this.buttonInfo_CSR.Name = "buttonInfo_CSR";
+            this.buttonInfo_CSR.Size = new System.Drawing.Size(75, 57);
+            this.buttonInfo_CSR.TabIndex = 13;
+            this.toolTip_CSR.SetToolTip(this.buttonInfo_CSR, "Информация о программе");
+            this.buttonInfo_CSR.UseVisualStyleBackColor = true;
+            this.buttonInfo_CSR.Click += new System.EventHandler(this.buttonInfo_CSR_Click);
+            this.buttonInfo_CSR.MouseEnter += new System.EventHandler(this.buttonInfo_CSR_MouseEnter);
+            this.buttonInfo_CSR.MouseLeave += new System.EventHandler(this.buttonInfo_CSR_MouseLeave);
+            // 
+            // textBoxA_CSR
+            // 
+            this.textBoxA_CSR.Location = new System.Drawing.Point(37, 275);
+            this.textBoxA_CSR.Name = "textBoxA_CSR";
+            this.textBoxA_CSR.Size = new System.Drawing.Size(100, 20);
+            this.textBoxA_CSR.TabIndex = 14;
+            // 
+            // textBoxM_CSR
+            // 
+            this.textBoxM_CSR.Location = new System.Drawing.Point(37, 302);
+            this.textBoxM_CSR.Name = "textBoxM_CSR";
+            this.textBoxM_CSR.Size = new System.Drawing.Size(100, 20);
+            this.textBoxM_CSR.TabIndex = 15;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -454,6 +499,7 @@ namespace Tyuiu.ChepurnykhSR.Sprint7.Project.V14
             this.panelTop_CSR.ResumeLayout(false);
             this.panelTop_CSR.PerformLayout();
             this.panelLeft_CSR.ResumeLayout(false);
+            this.panelLeft_CSR.PerformLayout();
             this.groupBoxKm_CSR.ResumeLayout(false);
             this.groupBoxTypeBus_CSR.ResumeLayout(false);
             this.groupBoxSearch_CSR.ResumeLayout(false);
@@ -509,6 +555,9 @@ namespace Tyuiu.ChepurnykhSR.Sprint7.Project.V14
         private System.Windows.Forms.DataVisualization.Charting.Chart chartKm_CSR;
         private System.Windows.Forms.GroupBox groupBoxKm_CSR;
         private System.Windows.Forms.ComboBox comboBoxKm_CSR;
+        private System.Windows.Forms.Button buttonInfo_CSR;
+        private System.Windows.Forms.TextBox textBoxM_CSR;
+        private System.Windows.Forms.TextBox textBoxA_CSR;
     }
 }
 

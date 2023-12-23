@@ -7,8 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using System.Windows.Forms.DataVisualization.Charting;
-
 using System.Windows.Forms;
 
 using System.IO;
@@ -180,6 +178,14 @@ namespace Tyuiu.ChepurnykhSR.Sprint7.Project.V14
                 try
                 {
 
+                    string[,] matrix = ds.LoadFromDataFile(openFilePath);
+
+                    rows = matrix.GetLength(0);
+                    columns = matrix.GetLength(1);
+
+                    dataGridView_CSR.RowCount = rows + 1;
+                    dataGridView_CSR.ColumnCount = columns;
+
                     DataGridViewColumn column = dataGridView_CSR.Columns[8];
 
                     if (selectedItem == "Минимум")
@@ -192,7 +198,13 @@ namespace Tyuiu.ChepurnykhSR.Sprint7.Project.V14
                     }
                     if (selectedItem == "Сбросить сортировку")
                     {
-                        dataGridView_CSR.Rows.Add();
+                        for (int i = 0; i < rows; i++)
+                        {
+                            for (int j = 0; j < columns; j++)
+                            {
+                                dataGridView_CSR.Rows[i].Cells[j].Value = matrix[i, j];
+                            }
+                        }
                     }
                 }
                 catch
@@ -261,25 +273,11 @@ namespace Tyuiu.ChepurnykhSR.Sprint7.Project.V14
                     m++;
                 }
             }
+            textBoxA_CSR.Text = a.ToString();
+            textBoxM_CSR.Text = m.ToString();
 
-            //chartKm_CSR.Series[0].Points.Clear();
-            //ChartArea chArea = new ChartArea();
-            //chArea.AxisX.IntervalAutoMode = IntervalAutoMode.VariableCount;
-            //chArea.AxisY.IntervalAutoMode = IntervalAutoMode.VariableCount;
-
-            //chartKm_CSR.ChartAreas.Add(chArea);
-
-            //Series seriesOper = new Series();
-            //seriesOper.AxisLabel = "Автобусы";
-            //var dp1 = seriesOper.Points.Add(a);
-            //chartKm_CSR.Series.Add(seriesOper);
-
-            //Series seriesPlan = new Series();
-            //seriesPlan.AxisLabel = "Маршрутки";
-            //var dp2 = seriesPlan.Points.Add(m);
-            //chartKm_CSR.Series.Add(seriesPlan);
-
-            //chartKm_CSR.AlignDataPointsByAxisLabel();
+            chartKm_CSR.Series[0].Points.AddXY(Convert.ToDouble(textBoxA_CSR.Text));
+            chartKm_CSR.Series[1].Points.AddXY(Convert.ToDouble(textBoxM_CSR.Text));
         }
 
         private void comboBoxKm_CSR_SelectedIndexChanged(object sender, EventArgs e)
@@ -298,6 +296,13 @@ namespace Tyuiu.ChepurnykhSR.Sprint7.Project.V14
                 }
                 try
                 {
+                    string[,] matrix = ds.LoadFromDataFile(openFilePath);
+
+                    rows = matrix.GetLength(0);
+                    columns = matrix.GetLength(1);
+
+                    dataGridView_CSR.RowCount = rows + 1;
+                    dataGridView_CSR.ColumnCount = columns;
 
                     DataGridViewColumn column = dataGridView_CSR.Columns[3];
 
@@ -309,12 +314,88 @@ namespace Tyuiu.ChepurnykhSR.Sprint7.Project.V14
                     {
                         dataGridView_CSR.Sort(column, ListSortDirection.Descending);
                     }
+                    if (selectedItem == "Сбросить сортировку")
+                    {
+                        for (int i = 0; i < rows; i++)
+                        {
+                            for (int j = 0; j < columns; j++)
+                            {
+                                dataGridView_CSR.Rows[i].Cells[j].Value = matrix[i, j];
+                            }
+                        }
+                    }
                 }
                 catch
                 {
                     MessageBox.Show("Невозможно выполнить сортировку", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void buttonInfo_CSR_Click(object sender, EventArgs e)
+        {
+            FormGuide formGuide = new FormGuide();
+            formGuide.ShowDialog();
+        }
+
+        private void buttonOpen_CSR_MouseEnter(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void buttonOpen_CSR_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Default;
+        }
+
+        private void buttonSave_CSR_MouseEnter(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void buttonSave_CSR_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Default;
+        }
+
+        private void buttonAdd_CSR_MouseEnter(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void buttonAdd_CSR_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Default;
+        }
+
+        private void buttonDelete_CSR_MouseEnter(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void buttonDelete_CSR_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Default;
+        }
+
+        private void buttonInfo_CSR_MouseEnter(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void buttonInfo_CSR_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Default;
+        }
+
+        private void buttonHelp_CSR_MouseEnter(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void buttonHelp_CSR_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Default;
         }
     }
 }

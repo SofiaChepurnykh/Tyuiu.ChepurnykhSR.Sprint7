@@ -64,6 +64,8 @@ namespace Tyuiu.ChepurnykhSR.Sprint7.Project.V14
             this.buttonOK_CSR.Text = "Закрыть";
             this.buttonOK_CSR.UseVisualStyleBackColor = true;
             this.buttonOK_CSR.Click += new System.EventHandler(this.buttonOK_CSR_Click);
+            this.buttonOK_CSR.MouseEnter += new System.EventHandler(this.buttonOK_CSR_MouseEnter);
+            this.buttonOK_CSR.MouseLeave += new System.EventHandler(this.buttonOK_CSR_MouseLeave);
             // 
             // FormAbout
             // 

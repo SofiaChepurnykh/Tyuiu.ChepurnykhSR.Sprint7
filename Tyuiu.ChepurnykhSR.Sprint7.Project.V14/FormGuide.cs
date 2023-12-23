@@ -10,24 +10,24 @@ using System.Windows.Forms;
 
 namespace Tyuiu.ChepurnykhSR.Sprint7.Project.V14
 {
-    public partial class FormAbout : Form
+    public partial class FormGuide : Form
     {
-        public FormAbout()
+        public FormGuide()
         {
             InitializeComponent();
         }
 
-        private void buttonOK_CSR_Click(object sender, EventArgs e)
+        private void buttonClose_CSR_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void buttonOK_CSR_MouseEnter(object sender, EventArgs e)
+        private void buttonClose_CSR_MouseEnter(object sender, EventArgs e)
         {
             this.Cursor = Cursors.Hand;
         }
 
-        private void buttonOK_CSR_MouseLeave(object sender, EventArgs e)
+        private void buttonClose_CSR_MouseLeave(object sender, EventArgs e)
         {
             this.Cursor = Cursors.Default;
         }
