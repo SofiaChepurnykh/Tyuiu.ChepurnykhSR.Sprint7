@@ -110,7 +110,29 @@ namespace Tyuiu.ChepurnykhSR.Sprint7.Project.V14
         {
             try
             {
-                dataGridView_CSR.Rows.Add();
+                string Num_CSR = textBoxNum_CSR.Text;
+                string Start_CSR = textBoxStart_CSR.Text;
+                string End_CSR = textBoxEnd_CSR.Text;
+                string Km_CSR = textBoxKm_CSR.Text;
+                string Pay_CSR = textBoxPay_CSR.Text;
+                string Ost_CSR = textBoxOst_CSR.Text;
+                string Type_CSR = textBoxType_CSR.Text;
+                string Date_CSR = textBoxDate_CSR.Text;
+                string Time_CSR = textBoxTime_CSR.Text;
+
+
+                // заполнение
+                dataGridView_CSR.Rows.Add(Num_CSR, Start_CSR, End_CSR, Km_CSR, Pay_CSR, Ost_CSR, Type_CSR, Date_CSR, Time_CSR);
+                textBoxNum_CSR.Text = "";
+                textBoxStart_CSR.Text = "";
+                textBoxEnd_CSR.Text = "";
+                textBoxKm_CSR.Text = "";
+                textBoxPay_CSR.Text = "";
+                textBoxOst_CSR.Text = "";
+                textBoxType_CSR.Text = "";
+                textBoxDate_CSR.Text = "";
+                textBoxTime_CSR.Text = "";
+                dataGridView_CSR.CurrentCell = dataGridView_CSR.Rows[dataGridView_CSR.Rows.Count - 1].Cells[0];
             }
             catch
             {
@@ -270,13 +292,17 @@ namespace Tyuiu.ChepurnykhSR.Sprint7.Project.V14
                 {
                     if (matrix[i, 6] == "Автобус")
                     {
+                        //a += Convert.ToInt32(dataGridView_CSR.Rows[i].Cells[8].Value);
                         a++;
                     }
                     if (matrix[i, 6] == "Маршрутка")
                     {
+                        //m += Convert.ToInt32(dataGridView_CSR.Rows[i].Cells[8].Value);
                         m++;
                     }
                 }
+                textBoxA_CSR.Text = a.ToString();
+                textBoxM_CSR.Text = m.ToString();
 
                 string[] seriesArray = { "Автобусы", "Маршрутки" };
                 int[] pointsArray = { a, m };
