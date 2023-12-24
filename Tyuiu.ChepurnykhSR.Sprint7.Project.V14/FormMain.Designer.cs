@@ -33,13 +33,14 @@ namespace Tyuiu.ChepurnykhSR.Sprint7.Project.V14
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.panelTop_CSR = new System.Windows.Forms.Panel();
-            this.buttonHelp_CSR = new System.Windows.Forms.Button();
             this.Name_CSR = new System.Windows.Forms.Label();
+            this.buttonHelp_CSR = new System.Windows.Forms.Button();
             this.panelLeft_CSR = new System.Windows.Forms.Panel();
+            this.buttonInfo_CSR = new System.Windows.Forms.Button();
             this.groupBoxKm_CSR = new System.Windows.Forms.GroupBox();
+            this.comboBoxKm_CSR = new System.Windows.Forms.ComboBox();
             this.groupBoxTypeBus_CSR = new System.Windows.Forms.GroupBox();
             this.buttonBus_CSR = new System.Windows.Forms.Button();
             this.groupBoxSearch_CSR = new System.Windows.Forms.GroupBox();
@@ -71,10 +72,6 @@ namespace Tyuiu.ChepurnykhSR.Sprint7.Project.V14
             this.toolTip_CSR = new System.Windows.Forms.ToolTip(this.components);
             this.openFileDialog_CSR = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog_CSR = new System.Windows.Forms.SaveFileDialog();
-            this.comboBoxKm_CSR = new System.Windows.Forms.ComboBox();
-            this.buttonInfo_CSR = new System.Windows.Forms.Button();
-            this.textBoxA_CSR = new System.Windows.Forms.TextBox();
-            this.textBoxM_CSR = new System.Windows.Forms.TextBox();
             this.panelTop_CSR.SuspendLayout();
             this.panelLeft_CSR.SuspendLayout();
             this.groupBoxKm_CSR.SuspendLayout();
@@ -100,6 +97,17 @@ namespace Tyuiu.ChepurnykhSR.Sprint7.Project.V14
             this.panelTop_CSR.Size = new System.Drawing.Size(1239, 111);
             this.panelTop_CSR.TabIndex = 0;
             // 
+            // Name_CSR
+            // 
+            this.Name_CSR.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Name_CSR.AutoSize = true;
+            this.Name_CSR.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Name_CSR.Location = new System.Drawing.Point(368, 36);
+            this.Name_CSR.Name = "Name_CSR";
+            this.Name_CSR.Size = new System.Drawing.Size(501, 39);
+            this.Name_CSR.TabIndex = 0;
+            this.Name_CSR.Text = "Городской транспорт Тюмени";
+            // 
             // buttonHelp_CSR
             // 
             this.buttonHelp_CSR.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -115,25 +123,12 @@ namespace Tyuiu.ChepurnykhSR.Sprint7.Project.V14
             this.buttonHelp_CSR.MouseEnter += new System.EventHandler(this.buttonHelp_CSR_MouseEnter);
             this.buttonHelp_CSR.MouseLeave += new System.EventHandler(this.buttonHelp_CSR_MouseLeave);
             // 
-            // Name_CSR
-            // 
-            this.Name_CSR.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Name_CSR.AutoSize = true;
-            this.Name_CSR.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Name_CSR.Location = new System.Drawing.Point(368, 36);
-            this.Name_CSR.Name = "Name_CSR";
-            this.Name_CSR.Size = new System.Drawing.Size(501, 39);
-            this.Name_CSR.TabIndex = 0;
-            this.Name_CSR.Text = "Городской транспорт Тюмени";
-            // 
             // panelLeft_CSR
             // 
-            this.panelLeft_CSR.Controls.Add(this.textBoxM_CSR);
-            this.panelLeft_CSR.Controls.Add(this.textBoxA_CSR);
             this.panelLeft_CSR.Controls.Add(this.buttonHelp_CSR);
+            this.panelLeft_CSR.Controls.Add(this.groupBoxTypeBus_CSR);
             this.panelLeft_CSR.Controls.Add(this.buttonInfo_CSR);
             this.panelLeft_CSR.Controls.Add(this.groupBoxKm_CSR);
-            this.panelLeft_CSR.Controls.Add(this.groupBoxTypeBus_CSR);
             this.panelLeft_CSR.Controls.Add(this.groupBoxSearch_CSR);
             this.panelLeft_CSR.Controls.Add(this.groupBoxTime_CSR);
             this.panelLeft_CSR.Controls.Add(this.groupBoxBus_CSR);
@@ -147,6 +142,20 @@ namespace Tyuiu.ChepurnykhSR.Sprint7.Project.V14
             this.panelLeft_CSR.Size = new System.Drawing.Size(343, 390);
             this.panelLeft_CSR.TabIndex = 1;
             // 
+            // buttonInfo_CSR
+            // 
+            this.buttonInfo_CSR.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonInfo_CSR.Image = ((System.Drawing.Image)(resources.GetObject("buttonInfo_CSR.Image")));
+            this.buttonInfo_CSR.Location = new System.Drawing.Point(174, 321);
+            this.buttonInfo_CSR.Name = "buttonInfo_CSR";
+            this.buttonInfo_CSR.Size = new System.Drawing.Size(75, 57);
+            this.buttonInfo_CSR.TabIndex = 13;
+            this.toolTip_CSR.SetToolTip(this.buttonInfo_CSR, "Информация о программе");
+            this.buttonInfo_CSR.UseVisualStyleBackColor = true;
+            this.buttonInfo_CSR.Click += new System.EventHandler(this.buttonInfo_CSR_Click);
+            this.buttonInfo_CSR.MouseEnter += new System.EventHandler(this.buttonInfo_CSR_MouseEnter);
+            this.buttonInfo_CSR.MouseLeave += new System.EventHandler(this.buttonInfo_CSR_MouseLeave);
+            // 
             // groupBoxKm_CSR
             // 
             this.groupBoxKm_CSR.Controls.Add(this.comboBoxKm_CSR);
@@ -156,6 +165,19 @@ namespace Tyuiu.ChepurnykhSR.Sprint7.Project.V14
             this.groupBoxKm_CSR.TabIndex = 12;
             this.groupBoxKm_CSR.TabStop = false;
             this.groupBoxKm_CSR.Text = "Сортировка по протяженности, км";
+            // 
+            // comboBoxKm_CSR
+            // 
+            this.comboBoxKm_CSR.FormattingEnabled = true;
+            this.comboBoxKm_CSR.Items.AddRange(new object[] {
+            "Минимум",
+            "Максимум",
+            "Сбросить сортировку"});
+            this.comboBoxKm_CSR.Location = new System.Drawing.Point(6, 31);
+            this.comboBoxKm_CSR.Name = "comboBoxKm_CSR";
+            this.comboBoxKm_CSR.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxKm_CSR.TabIndex = 0;
+            this.comboBoxKm_CSR.SelectedIndexChanged += new System.EventHandler(this.comboBoxKm_CSR_SelectedIndexChanged);
             // 
             // groupBoxTypeBus_CSR
             // 
@@ -174,8 +196,11 @@ namespace Tyuiu.ChepurnykhSR.Sprint7.Project.V14
             this.buttonBus_CSR.Size = new System.Drawing.Size(118, 23);
             this.buttonBus_CSR.TabIndex = 0;
             this.buttonBus_CSR.Text = "Выполнить";
+            this.toolTip_CSR.SetToolTip(this.buttonBus_CSR, "Вывести график колличества атобусов и мартшруток");
             this.buttonBus_CSR.UseVisualStyleBackColor = true;
             this.buttonBus_CSR.Click += new System.EventHandler(this.buttonBus_CSR_Click);
+            this.buttonBus_CSR.MouseEnter += new System.EventHandler(this.buttonBus_CSR_MouseEnter);
+            this.buttonBus_CSR.MouseLeave += new System.EventHandler(this.buttonBus_CSR_MouseLeave);
             // 
             // groupBoxSearch_CSR
             // 
@@ -414,11 +439,6 @@ namespace Tyuiu.ChepurnykhSR.Sprint7.Project.V14
             this.chartKm_CSR.Location = new System.Drawing.Point(0, 0);
             this.chartKm_CSR.Name = "chartKm_CSR";
             this.chartKm_CSR.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Grayscale;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series2.Legend = "Legend1";
-            series2.Name = "Км";
-            this.chartKm_CSR.Series.Add(series2);
             this.chartKm_CSR.Size = new System.Drawing.Size(542, 364);
             this.chartKm_CSR.TabIndex = 0;
             title2.Name = "Title_CSR";
@@ -442,47 +462,6 @@ namespace Tyuiu.ChepurnykhSR.Sprint7.Project.V14
             // 
             this.openFileDialog_CSR.FileName = "openFileDialog1";
             // 
-            // comboBoxKm_CSR
-            // 
-            this.comboBoxKm_CSR.FormattingEnabled = true;
-            this.comboBoxKm_CSR.Items.AddRange(new object[] {
-            "Минимум",
-            "Максимум",
-            "Сбросить сортировку"});
-            this.comboBoxKm_CSR.Location = new System.Drawing.Point(6, 31);
-            this.comboBoxKm_CSR.Name = "comboBoxKm_CSR";
-            this.comboBoxKm_CSR.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxKm_CSR.TabIndex = 0;
-            this.comboBoxKm_CSR.SelectedIndexChanged += new System.EventHandler(this.comboBoxKm_CSR_SelectedIndexChanged);
-            // 
-            // buttonInfo_CSR
-            // 
-            this.buttonInfo_CSR.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonInfo_CSR.Image = ((System.Drawing.Image)(resources.GetObject("buttonInfo_CSR.Image")));
-            this.buttonInfo_CSR.Location = new System.Drawing.Point(174, 321);
-            this.buttonInfo_CSR.Name = "buttonInfo_CSR";
-            this.buttonInfo_CSR.Size = new System.Drawing.Size(75, 57);
-            this.buttonInfo_CSR.TabIndex = 13;
-            this.toolTip_CSR.SetToolTip(this.buttonInfo_CSR, "Информация о программе");
-            this.buttonInfo_CSR.UseVisualStyleBackColor = true;
-            this.buttonInfo_CSR.Click += new System.EventHandler(this.buttonInfo_CSR_Click);
-            this.buttonInfo_CSR.MouseEnter += new System.EventHandler(this.buttonInfo_CSR_MouseEnter);
-            this.buttonInfo_CSR.MouseLeave += new System.EventHandler(this.buttonInfo_CSR_MouseLeave);
-            // 
-            // textBoxA_CSR
-            // 
-            this.textBoxA_CSR.Location = new System.Drawing.Point(37, 275);
-            this.textBoxA_CSR.Name = "textBoxA_CSR";
-            this.textBoxA_CSR.Size = new System.Drawing.Size(100, 20);
-            this.textBoxA_CSR.TabIndex = 14;
-            // 
-            // textBoxM_CSR
-            // 
-            this.textBoxM_CSR.Location = new System.Drawing.Point(37, 302);
-            this.textBoxM_CSR.Name = "textBoxM_CSR";
-            this.textBoxM_CSR.Size = new System.Drawing.Size(100, 20);
-            this.textBoxM_CSR.TabIndex = 15;
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -499,7 +478,6 @@ namespace Tyuiu.ChepurnykhSR.Sprint7.Project.V14
             this.panelTop_CSR.ResumeLayout(false);
             this.panelTop_CSR.PerformLayout();
             this.panelLeft_CSR.ResumeLayout(false);
-            this.panelLeft_CSR.PerformLayout();
             this.groupBoxKm_CSR.ResumeLayout(false);
             this.groupBoxTypeBus_CSR.ResumeLayout(false);
             this.groupBoxSearch_CSR.ResumeLayout(false);
@@ -556,8 +534,6 @@ namespace Tyuiu.ChepurnykhSR.Sprint7.Project.V14
         private System.Windows.Forms.GroupBox groupBoxKm_CSR;
         private System.Windows.Forms.ComboBox comboBoxKm_CSR;
         private System.Windows.Forms.Button buttonInfo_CSR;
-        private System.Windows.Forms.TextBox textBoxM_CSR;
-        private System.Windows.Forms.TextBox textBoxA_CSR;
     }
 }
 

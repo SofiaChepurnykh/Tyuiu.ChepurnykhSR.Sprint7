@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using System.Windows.Forms.DataVisualization.Charting;
+
 using System.Windows.Forms;
 
 using System.IO;
@@ -245,39 +247,60 @@ namespace Tyuiu.ChepurnykhSR.Sprint7.Project.V14
 
         private void buttonBus_CSR_Click(object sender, EventArgs e)
         {
-            int rows = dataGridView_CSR.RowCount;
-            int columns = dataGridView_CSR.ColumnCount;
-            string str;
-            string[,] matrix = new string[rows, columns];
-            for (int i = 0; i < rows; i++)
+            try
             {
-                for (int j = 0; j < columns; j++)
+                int rows = dataGridView_CSR.RowCount;
+                int columns = dataGridView_CSR.ColumnCount;
+                string str;
+                string[,] matrix = new string[rows, columns];
+                for (int i = 0; i < rows; i++)
                 {
-                    str = "";
-                    str += dataGridView_CSR.Rows[i].Cells[j].Value;
-                    matrix[i, j] = str;
+                    for (int j = 0; j < columns; j++)
+                    {
+                        str = "";
+                        str += dataGridView_CSR.Rows[i].Cells[j].Value;
+                        matrix[i, j] = str;
+                    }
+
                 }
 
-            }
+                int a = 0;
+                int m = 0;
+                for (int i = 0; i < rows - 1; i++)
+                {
+                    if (matrix[i, 6] == "Автобус")
+                    {
+                        a++;
+                    }
+                    if (matrix[i, 6] == "Маршрутка")
+                    {
+                        m++;
+                    }
+                }
 
-            int a = 0;
-            int m = 0;
-            for (int i = 0; i < rows - 1; i++)
+                string[] seriesArray = { "Автобусы", "Маршрутки" };
+                int[] pointsArray = { a, m };
+
+                // Set palette.
+                this.chartKm_CSR.Palette = ChartColorPalette.Berry;
+
+                // Set title.
+                //this.chartKm_CSR.Titles.Add("Протяженность маршрута, км");
+
+                // Add series.
+                for (int i = 0; i < seriesArray.Length; i++)
+                {
+                    // Add series.
+                    Series series = this.chartKm_CSR.Series.Add(seriesArray[i]);
+
+                    // Add point.
+                    series.Points.Add(pointsArray[i]);
+                }
+            }
+            catch
             {
-                if (matrix[i, 6] == "Автобус")
-                {
-                    a++;
-                }
-                if (matrix[i, 6] == "Маршрутка")
-                {
-                    m++;
-                }
+                MessageBox.Show("Невозможно повторно построить график", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            textBoxA_CSR.Text = a.ToString();
-            textBoxM_CSR.Text = m.ToString();
-
-            chartKm_CSR.Series[0].Points.AddXY(Convert.ToDouble(textBoxA_CSR.Text));
-            chartKm_CSR.Series[1].Points.AddXY(Convert.ToDouble(textBoxM_CSR.Text));
         }
 
         private void comboBoxKm_CSR_SelectedIndexChanged(object sender, EventArgs e)
@@ -396,6 +419,16 @@ namespace Tyuiu.ChepurnykhSR.Sprint7.Project.V14
         private void buttonHelp_CSR_MouseLeave(object sender, EventArgs e)
         {
             this.Cursor = Cursors.Default;
+        }
+
+        private void buttonBus_CSR_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Default;
+        }
+
+        private void buttonBus_CSR_MouseEnter(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
         }
     }
 }
