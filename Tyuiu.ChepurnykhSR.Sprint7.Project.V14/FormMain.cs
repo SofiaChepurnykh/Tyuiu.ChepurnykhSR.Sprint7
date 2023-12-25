@@ -53,6 +53,16 @@ namespace Tyuiu.ChepurnykhSR.Sprint7.Project.V14
                     }
                 }
                 dataGridView_CSR.AutoResizeColumns();
+
+                for (int i = 0; i < dataGridView_CSR.RowCount - 1; i++)
+                {
+
+                    if (dataGridView_CSR.Rows[i].Cells[3].Value.ToString() == "")
+                    {
+                        dataGridView_CSR.Rows.RemoveAt(i);
+                        i--;
+                    }
+                }
                 dataGridView_CSR.ScrollBars = ScrollBars.Both;
                 buttonSave_CSR.Enabled = true;
                 buttonAdd_CSR.Enabled = true;
