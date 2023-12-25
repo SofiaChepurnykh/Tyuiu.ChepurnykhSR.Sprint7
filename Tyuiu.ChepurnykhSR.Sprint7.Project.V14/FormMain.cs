@@ -73,31 +73,42 @@ namespace Tyuiu.ChepurnykhSR.Sprint7.Project.V14
         {
             try
             {
-                saveFileDialog_CSR.FileName = ".csv";
-                saveFileDialog_CSR.InitialDirectory = @":L";
-                if (saveFileDialog_CSR.ShowDialog() == DialogResult.OK)
+                saveFileDialog_CSR.FileName = openFilePath;
+                saveFileDialog_CSR.InitialDirectory = Directory.GetCurrentDirectory();
+                saveFileDialog_CSR.ShowDialog();
+
+                string path = saveFileDialog_CSR.FileName;
+
+                FileInfo fileInfo = new FileInfo(path);
+                bool fileExists = fileInfo.Exists;
+
+                if (fileExists)
                 {
-                    string savepath = saveFileDialog_CSR.FileName;
+                    File.Delete(path);
+                }
 
-                    if (File.Exists(savepath)) File.Delete(savepath);
+                int rows = dataGridView_CSR.RowCount;
+                int columns = dataGridView_CSR.ColumnCount;
 
-                    int rows = dataGridView_CSR.RowCount;
-                    int columns = dataGridView_CSR.ColumnCount;
+                string str = "";
 
-                    StringBuilder strBuilder = new StringBuilder();
 
-                    for (int i = 0; i < rows; i++)
+
+                for (int i = 0; i < rows; i++)
+                {
+                    for (int j = 0; j < columns; j++)
                     {
-                        for (int j = 0; j < columns; j++)
+                        if (j != columns - 1)
                         {
-                            strBuilder.Append(dataGridView_CSR.Rows[i].Cells[j].Value);
-
-                            if (j != columns - 1) strBuilder.Append(";");
+                            str = str + dataGridView_CSR.Rows[i].Cells[j].Value + ";";
                         }
-                        strBuilder.AppendLine();
+                        else
+                        {
+                            str = str + dataGridView_CSR.Rows[i].Cells[j].Value;
+                        }
                     }
-                    File.WriteAllText(savepath, strBuilder.ToString(), Encoding.GetEncoding(1251));
-                    MessageBox.Show("Файл успешно сохранен", "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    File.AppendAllText(path, str + Environment.NewLine);
+                    str = "";
                 }
             }
             catch
@@ -307,13 +318,10 @@ namespace Tyuiu.ChepurnykhSR.Sprint7.Project.V14
                 string[] seriesArray = { "Автобусы", "Маршрутки" };
                 int[] pointsArray = { a, m };
 
-                // Set palette.
                 this.chartKm_CSR.Palette = ChartColorPalette.Berry;
 
-                // Set title.
                 //this.chartKm_CSR.Titles.Add("Протяженность маршрута, км");
-
-                // Add series.
+                
                 for (int i = 0; i < seriesArray.Length; i++)
                 {
                     // Add series.

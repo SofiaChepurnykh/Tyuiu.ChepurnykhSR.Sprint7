@@ -15,7 +15,7 @@ namespace Tyuiu.ChepurnykhSR.Sprint7.Project.V14.Test
         {
             DataService ds = new DataService();
 
-            string filePath = @"C:C:\Users\user\source\repos\Tyuiu.ChepurnykhSR.Sprint7\ChepurnykhSR.DataBase.csv";
+            string filePath = @"C:\Users\user\source\repos\Tyuiu.ChepurnykhSR.Sprint7\Tyuiu.ChepurnykhSR.Sprint7.Project.V14\bin\DebugChepurnykhSR.DataBase.csv";
 
             AddDataToCSV(filePath);
         }

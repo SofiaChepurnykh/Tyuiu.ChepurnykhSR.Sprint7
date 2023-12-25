@@ -31,18 +31,5 @@ namespace Tyuiu.ChepurnykhSR.Sprint7.Project.V14.Lib
             }
             return matrix;
         }
-
-        //public double CalculateSum(double[] valueSum)
-        //{
-        //    double sum = 0;
-
-
-        //    for (int i = 0; i < valueSum.Length; i++)
-        //    {
-        //        sum += valueSum[i];
-        //    }
-
-        //    return Math.Round(sum, 2);
-        //}
     }
 }
